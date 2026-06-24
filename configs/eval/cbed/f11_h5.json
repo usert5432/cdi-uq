@@ -1,0 +1,48 @@
+{
+    "batch_size": 64,
+    "dataset": {
+        "name": "cbed-h5",
+        "path": "cbed/f11",
+        "subdirs": [
+            "f11f"
+        ],
+        "csv_suffix": null,
+        "target_columns": [
+            "conf_0",
+            "conf_1",
+            "conf_2",
+            "conf_3",
+            "conf_4",
+            "conf_5",
+            "conf_6",
+            "conf_7",
+            "conf_8",
+            "conf_9",
+            "conf_10",
+            "conf_11",
+            "label"
+        ]
+    },
+    "shuffle": false,
+    "drop_last": false,
+    "shapes": [
+        [
+            1,
+            320,
+            320
+        ],
+        [
+            13
+        ]
+    ],
+    "transform_image": [
+        {
+            "name": "center-crop",
+            "size": [
+                320,
+                320
+            ]
+        }
+    ],
+    "workers": 4
+}
